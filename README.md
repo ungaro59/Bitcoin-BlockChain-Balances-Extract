@@ -8,6 +8,8 @@ https://github.com/harbour/core#how-to-get
 
 https://sourceforge.net/projects/harbour-project/files/binaries-windows/
 
+Balaye l'intégralité de la blockchain locale (fichiers blkXXXXX.DAT) créée par le client Bitcoin-Core.
+Le chemin des fichiers .dat utilisé par défaut est %APPDATA%\bitcoin\blocks
 
 
 
