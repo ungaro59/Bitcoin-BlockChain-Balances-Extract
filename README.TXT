@@ -37,3 +37,5 @@ pour limiter le temps d'extraction depuis le bloc 0 (aujourd'hui environ 500,000
 
 Il est possible de stopper le traitement par ECHAP jusqu'à un N° de bloc determiné. 
 Bien ententu, les soldes des adresses seront ceux du dernier bloc analysé.
+=> Lorsque l'application sera relancée, l'extraction reprendra automatiquement à partir du dernier bloc analysé.
+
