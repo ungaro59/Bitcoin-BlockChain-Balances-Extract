@@ -34,6 +34,7 @@ Et un fichier CSV contenant l'ensemble des adresses avec un avoir determiné par
 -> Soldes.CSV extraction des adresses btc non nulles avec date de derniere modification
 
 Exemple :
+
 1111111111111111111114oLvT2;7110007;20110512074620
 11111111111111111111BZbvjr;1000000;20110427015755
 111SZ5LN4WeKd89CSt3i2fngnDzFL3nRw;1000000;20110604091137
