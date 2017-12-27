@@ -2,7 +2,7 @@
 Extract Balances from all bitcoin address. Use .DAT of bitcoin-core client
 
 Environnement Windows.
-Developpement sous Harbour core V 3 et base de données Dbase :
+Developpement sous Harbour core V 3 (une evolution open source de Clipper 5) et base de données Dbase :
 
 https://github.com/harbour/core#how-to-get
 
