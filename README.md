@@ -27,11 +27,17 @@ INPUTS.DBF : Contient toutes les transactions inputs (sent)
 
 OUTPUTS.DBF : Contient toutes les transactions outputs (received)
 
-Adreses_non_nulles.DBF : Contient la liste des adresses bitcoin avec un avoir positif
+Adresses_non_nulles.DBF : Contient la liste des adresses bitcoin avec un avoir positif
 
-Et un fichier CSV contenant l'ensemble des adresses avec un avoir determiné par le parametre :
+Et un fichier CSV contenant l'ensemble des adresses avec un avoir determiné par le parametre de lancement :
 
 -> Soldes.CSV extraction des adresses btc non nulles avec date de derniere modification
+
+Exemple :
+1111111111111111111114oLvT2;7110007;20110512074620
+11111111111111111111BZbvjr;1000000;20110427015755
+111SZ5LN4WeKd89CSt3i2fngnDzFL3nRw;1000000;20110604091137
+111g3qjk7YzhdkKuMmTBzUB8gQ55YZ6MG;5000000000;20100713095544
 
 
 !! Attention !!, l'extraction depuis le bloc 0 est TRES longues (plusieurs jours). 
