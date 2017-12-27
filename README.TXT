@@ -11,7 +11,7 @@ Utilisation :
 
 Balance [Montant en Satoshis]
 
-Exemple :  Balance 50000000000
+Exemple :  Balance 5000000000
 
 Extrait dans un fichier SOLDES.CSV l'ensemble des adresses bitcoins avec un avoir >=50 BTC
 
