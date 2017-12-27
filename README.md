@@ -14,7 +14,6 @@ Le chemin des fichiers .dat utilisé par défaut par l'application est %APPDATA%
 Utilisation : 
 
 Balance [Montant en Satoshis]
-  
 Exemple :  Balance 500000000
 
 Extrait dans un fichier SOLDES.CSV l'ensemble des adresses bitcoins avec un avoir >=50 BTC
