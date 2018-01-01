@@ -32,7 +32,7 @@ Exemple :
 111g3qjk7YzhdkKuMmTBzUB8gQ55YZ6MG;5000000000;20100713095544
 
 !! Attention !!, l'extraction depuis le bloc 0 est TRES longues (plusieurs jours). 
-Pour le traitement, l'utilisaton d'un disque dur SSD (250-500 Go) est quasi-obligatoire 
+Pour le traitement, l'utilisaton d'un disque dur SSD 500 Go est quasi-obligatoire 
 pour limiter le temps d'extraction depuis le bloc 0 (aujourd'hui environ 500,000 blocs).
 
 Il est possible de stopper le traitement par ECHAP jusqu'à un N° de bloc determiné. 
