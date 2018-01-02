@@ -40,22 +40,22 @@ Function Base58_encode(chaine1,type_conv,Conv2)
    Local sZero, binsz, nsize, buf, buf58, high,Carry, zcount,reste
    
    DO CASE
-      CASE type_conv=0
+          CASE type_conv=0 //Public key Hexa 65 octets
 	       chaine2=chaine1
-	  CASE type_conv=1
+	  CASE type_conv=1 //Public key hexa sur 20 octets Hash160
 	       chaine2=chaine1
-	  CASE type_conv=2
+	  CASE type_conv=2 //Public key non decodable
 	       return "Unable to decode public address"
-	  case type_conv=3
+	  case type_conv=3 //Public key sous sa version compresée de 33 octets (Traitement identique au format 65 octets)
 	       chaine2=chaine1
-	  case type_conv=4
+	  case type_conv=4 //Public Key sur 20 octets sous sa version OP_HASH160 : hashed first with SHA-256 and then with RIPEMD-160.
 	       chaine2=chaine1
-	  case type_conv=5
+	  case type_conv=5 //Public key en ascii
 	       Chaine2=""
-           for i=1 to len(chaine1)/2
+	       for i=1 to len(chaine1)/2
 	          chaine2+=chr(HB_HexToNum(substr(chaine1,(i-1)*2+1,2)))
-           next
-		   type_conv=Conv2
+	       next
+	       type_conv=Conv2
    ENDCASE
 
 
