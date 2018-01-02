@@ -122,24 +122,15 @@ Function Base58_encode(chaine1,type_conv,Conv2)
    FOR i = zcount TO binsz
  	  j = nsize 
 	  Carry = Asc(substr(Chaine4,i,1))
-      //?"**** i="+str(i)      	 
-	  //?"Carry="+str(Carry)
-	  Do while .T.
-	    //?"J="+str(j)
+     	  Do while .T.
 		Carry = Carry + 256*Asc(substr(buf,j,1))
-		//?"Carry="+str(Carry)
-		
 		buf = stuff(buf,j,1,chr(mod(Carry,58)))
-		//?"buf[j]=0x"+hb_StrToHex(substr(buf,j,1))
-		//?hb_StrToHex(buf)
 		reste=Carry
 		Carry = int(Carry / 58)
-		//?"Carry="+str(Carry)
-		//wait "stop"
 		j--
 		if (j > high .or. Carry <> 0)
-	     else
-		    exit
+	     	else
+		 exit
 		endif
 	  Enddo
 	
@@ -151,11 +142,11 @@ Function Base58_encode(chaine1,type_conv,Conv2)
       if reste>0 .and. j=0
          for i=1 to (zcount-1)
             buf58+="1"
-   	     next
+   	 next
       endif
-	  zcount=1
-	else
-	  zcount=2
+      zcount=1
+    else
+      zcount=2
    endif
    
    for j=zcount to nsize	 
