@@ -155,7 +155,7 @@ Function Base58_encode(chaine1,type_conv,Conv2)
 		//?"Carry="+str(Carry)
 		//wait "stop"
 		j--
-	    if Carry = 0 .and. j<0
+	        if Carry = 0 .and. j<high
 		    exit
 		endif
 	  Enddo
@@ -166,10 +166,10 @@ Function Base58_encode(chaine1,type_conv,Conv2)
    buf58=""  
    IF type_conv<>4  //P2SH address non concernées.
       zcount--
-	  if zcount>0
+      if zcount>0
          for i=1 to zcount
             buf58+="1"
-   	     next
+	 next
       endif
    endif
 
