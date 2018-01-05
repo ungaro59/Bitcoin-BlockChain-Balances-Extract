@@ -20,7 +20,8 @@ L'application crée 4 fichiers DBF :
 BLOCKS.DBF : Contient la liste de tous les blocks de la blockchain.
 INPUTS.DBF : Contient toutes les transactions inputs (sent)
 OUTPUTS.DBF : Contient toutes les transactions outputs (received)
-Adresses_non_nulles.DBF : Contient la liste des adresses bitcoin avec un avoir positif
+Adresses_non_nulles.DBF : Contient la liste des adresses bitcoin avec un avoir positif ainsi que des informations 
+sur les dates de premieres entrées/sorties et la date de derniere modification.
 
 Et un fichier CSV contenant l'ensemble des adresses avec un avoir determiné par le parametre de lancement :
 -> Soldes.CSV extraction des adresses btc non nulles avec date de derniere modification
