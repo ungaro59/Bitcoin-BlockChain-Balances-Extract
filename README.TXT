@@ -32,14 +32,13 @@ Exemple :
 111g3qjk7YzhdkKuMmTBzUB8gQ55YZ6MG;5000000000;20100713095544
 
 !! Attention !!, l'extraction depuis le bloc 0 est TRES longues (plusieurs jours? 8-10j). 
-Pour le traitement, l'utilisaton d'un disque dur SSD 500 Go est quasi-obligatoire 
+Il faut au moins 500go d'espace sur le disque dur.
+Pour le traitement, l'utilisaton d'un disque dur SSD >=500Go-1To Go est fortement recommandée 
 pour limiter le temps d'extraction depuis le bloc 0 (aujourd'hui environ 500,000 blocs).
 
 Il est possible de stopper le traitement par ECHAP jusqu'à un N° de bloc determiné. 
 Bien ententu, les soldes des adresses s'arrêteront à la date du dernier bloc analysé.
-Attention, seule la phase 2 ne peut pas être interrompue par ECHAP et doit impérativement se terminer intégralement.
-Sinon des erreurs dans les soldes apparaitront dans la suite du traitement.
 => Lorsque l'application sera relancée, l'extraction reprendra automatiquement à partir du dernier bloc analysé.
-La phase 2 peut-être aussi longue que la phase 1, une durée de traitement approximative est calculée. 
+La phase 2 peut-être aussi longue que la phase 1 sans SSD, une durée de traitement approximative est calculée. 
 
 
