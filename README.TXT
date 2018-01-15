@@ -3,10 +3,10 @@ Developpement sous Harbour core V 3 (une evolution open source de Clipper 5) et 
 
 https://github.com/harbour/core#how-to-get
 
-Telechargez la derniere version du compilateur Harbour ici :
-https://sourceforge.net/projects/harbour-project/files/binaries-windows/
+Telechargez la derniere version du compilateur Harbour ici (harbour-nightly-win.exe) :
+https://sourceforge.net/projects/harbour-project/files/binaries-windows/nightly/
 
-A decompresser dans le dossier C:\HB32 par exemple.
+A installer dans le dossier C:\HB32 par exemple.
 -------------------------------------------------------
 
 Ce programme balaye l'intégralité de la blockchain locale (fichiers blkXXXXX.DAT) créée par le client 
