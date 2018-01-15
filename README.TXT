@@ -13,7 +13,8 @@ Ce programme balaye l'intégralité de la blockchain locale (fichiers blkXXXXX.D
 Bitcoin-Core (0.15.1) ou ulterieurs. Le chemin des fichiers .dat utilisé par défaut par l'application 
 est %APPDATA%\bitcoin\blocks
 
-Pour compiler, creer un dossier "Balance" sous C:\hb32 et decompressez l'integralité du dossier gitHub. Pour compiler le programme, utilisez COMPIL.BAT :  
+Pour compiler, creer un dossier "Balance" sous C:\hb32 et decompressez l'integralité du dossier gitHub. 
+Pour compiler le programme, utilisez COMPIL.BAT :  
 
 Compil BALANCE  
 
