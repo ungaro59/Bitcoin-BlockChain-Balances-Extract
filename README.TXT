@@ -18,7 +18,8 @@ Pour compiler le programme, utilisez COMPIL.BAT :
 
 Compil BALANCE  
 
-à la fin de la compilation, le programme se lance automatiquement et la récupération des blocs de la blockchain démarre.
+à la fin de la compilation, le programme se lance automatiquement, les fichiers .DBF/.NTX nécessaires sont créés et la 
+récupération des blocs de la blockchain démarre.
 
 Utilisation : 
 
