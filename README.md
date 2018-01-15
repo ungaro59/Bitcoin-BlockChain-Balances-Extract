@@ -7,3 +7,7 @@ Xbase (.DBF) databases.
 
 Developpement sous Harbour core V 3 (une evolution open source de Clipper 5) 
 
+Consulter le fichier README.TXT pour de plus amples explications..
+
+SOON...
+
