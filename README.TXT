@@ -9,7 +9,9 @@ https://sourceforge.net/projects/harbour-project/files/binaries-windows/
 A decompresser dans le dossier C:\HB32 par exemple.
 -------------------------------------------------------
 
-Ce programme balaye l'intégralité de la blockchain locale (fichiers blkXXXXX.DAT) créée par le client Bitcoin-Core (0.15.1) ou ulterieurs. Le chemin des fichiers .dat utilisé par défaut par l'application est %APPDATA%\bitcoin\blocks
+Ce programme balaye l'intégralité de la blockchain locale (fichiers blkXXXXX.DAT) créée par le client 
+Bitcoin-Core (0.15.1) ou ulterieurs. Le chemin des fichiers .dat utilisé par défaut par l'application 
+est %APPDATA%\bitcoin\blocks
 
 Pour compiler, creer un dossier "Balance" sous C:\hb32 et decompressez l'integralité du dossier gitHub. Pour compiler le programme, utilisez COMPIL.BAT :  
 
