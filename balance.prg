@@ -4,6 +4,7 @@
 // https://github.com/libbitcoin/libbitcoin-explorer/wiki/Payment-Address-Deconstruction
 // https://bitcoin.stackexchange.com/questions/19081/parsing-bitcoin-input-and-output-addresses-from-scripts/19108#19108
 // https://bitcoin.stackexchange.com/questions/5021/how-do-you-get-the-op-hash160-value-from-a-bitcoin-address
+// Donation : 143wrQSVn3jciPEdrjPaxQ8puee3vmtsPB
 
 #require "hbssl"
 #include "fileio.ch"
