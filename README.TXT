@@ -14,12 +14,13 @@ Bitcoin-Core (0.15.1) ou ulterieurs. Le chemin des fichiers .dat utilisé par d�
 est %APPDATA%\bitcoin\blocks
 
 Pour utiliser le programme, creer un dossier "Balance" sous C:\hb32 et decompressez l'integralité du dossier gitHub. 
-Compiler le, pour cela, utilisez COMPIL.BAT :  
+Compiler le, pour cela, utilisez COMPIL.BAT ou utilisez directement le fichier compilé Balance.EXE :  
 
 Compil BALANCE  
 
 à la fin de la compilation, le programme se lance automatiquement, les fichiers .DBF/.NTX nécessaires sont créés et la 
-récupération des blocs de la blockchain démarre.
+récupération des blocs de la blockchain démarre. Attention la synchro du client Bitcoin-core doit être complete, sinon
+la récupération ne pourra s'effectuer.
 
 Utilisation : 
 
@@ -30,15 +31,12 @@ Exemple :  Balance 5000000000
 Extrait dans un fichier SOLDES.CSV l'ensemble des adresses bitcoins avec un avoir >=50 BTC
 Il y a actuellement environ 27 millions d'adresses bitcoins avec un solde positif.
 
-L'application crée 4 fichiers DBF :
+L'application crée un fichier DBF :
 
-BLOCKS.DBF : Contient la liste de tous les blocks de la blockchain.
-INPUTS.DBF : Contient toutes les transactions inputs (sent)
-OUTPUTS.DBF : Contient toutes les transactions outputs (received)
-Adresses_non_nulles.DBF : Contient la liste des adresses bitcoin avec un avoir positif ainsi que des informations 
-sur les dates de premieres entrées/sorties et la date de derniere entrée/sortie.
+Adresses_non_nulles.DBF : Contient la liste des adresses bitcoin avec un avoir >0 ainsi que des informations 
+sur les dates de premieres entrées/sorties, le nbre de transactions I/O, et la date de derniere entrée/sortie.
 
-Et un fichier CSV contenant l'ensemble des adresses avec un avoir determiné par le parametre de lancement :
+Un fichier CSV contenant l'ensemble des adresses avec un avoir determiné par le parametre de lancement :
 -> Soldes.CSV extraction des adresses btc non nulles avec date de derniere modification
 
 Exemple :
@@ -47,14 +45,13 @@ Exemple :
 111SZ5LN4WeKd89CSt3i2fngnDzFL3nRw;1000000;20110604091137
 111g3qjk7YzhdkKuMmTBzUB8gQ55YZ6MG;5000000000;20100713095544
 
-!! Attention !!, l'extraction depuis le bloc 0 est TRES longues (plusieurs jours? 8-10j voir plus). 
-Il faut au moins 500go d'espace sur le disque dur.
-Pour le traitement, l'utilisaton d'un disque dur SSD >=500Go-1To Go est fortement recommandée 
-pour limiter le temps d'extraction depuis le bloc 0 (aujourd'hui environ 500,000 blocs).
+!! Attention !!, l'extraction depuis le bloc 0 est longue (plusieurs jours?. 
+Il faut au moins 128go d'espace sur le disque dur.
+Pour le traitement, l'utilisaton d'un disque dur SSD >=128Go est très fortement recommandée 
+pour limiter le temps d'extraction depuis le bloc 0 (aujourd'hui plus de 500,000 blocs).
 
-Il est possible de stopper le traitement par ECHAP jusqu'à un N° de bloc determiné. 
+Dans l'étape 1, il est possible de stopper le traitement par ECHAP jusqu'à un N° de bloc determiné. 
+Attention, Il faut laisser se terminer les phases 2 et 3 jusqu'au bout..
 Bien ententu, les soldes des adresses s'arrêteront à la date du dernier bloc analysé.
 => Lorsque l'application sera relancée, l'extraction reprendra automatiquement à partir du dernier bloc analysé.
-La phase 2 peut-être aussi longue que la phase 1 sans SSD, une durée de traitement approximative est calculée. 
-
 
