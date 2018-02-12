@@ -6,8 +6,8 @@ https://github.com/harbour/core#how-to-get
 Telechargez la derniere version du compilateur Harbour ici (harbour-nightly-win.exe) :
 https://sourceforge.net/projects/harbour-project/files/binaries-windows/nightly/
 
-A installer dans le dossier C:\HB32 par exemple.
--------------------------------------------------------
+A installer dans un dossier racine \HB32 (C:\hb32 par exemple)
+-------------------------------------------------------------
 
 Ce programme balaye l'intégralité de la blockchain locale (fichiers blkXXXXX.DAT) créée par le client 
 Bitcoin-Core (0.15.1) ou ulterieurs. Le chemin des fichiers .dat utilisé par défaut par l'application 
@@ -20,7 +20,7 @@ Compil BALANCE
 
 à la fin de la compilation, le programme se lance automatiquement, les fichiers .DBF/.NTX nécessaires sont créés et la 
 récupération des blocs de la blockchain démarre. Attention la synchro du client Bitcoin-core doit être complete, sinon
-la récupération ne pourra s'effectuer.
+la récupération ne pourra s'effectuer correctement.
 
 Utilisation : 
 
@@ -29,7 +29,7 @@ Balance [Montant en Satoshis]
 Exemple :  Balance 5000000000
 
 Extrait dans un fichier SOLDES.CSV l'ensemble des adresses bitcoins avec un avoir >=50 BTC
-Il y a actuellement environ 27 millions d'adresses bitcoins avec un solde positif.
+Il y a actuellement environ 27 millions d'adresses bitcoins avec un solde positif et environ 370 000 000 en tout.
 
 L'application crée un fichier DBF :
 
