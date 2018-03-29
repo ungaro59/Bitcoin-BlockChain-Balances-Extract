@@ -1,9 +1,11 @@
 # Bitcoin-BlockChain-Balance-Parser
-Extract Balances from all bitcoin address. Use .DAT of bitcoin-core client
+Extrait les soldes de toutes les adresses bitcoin contenues dans la blockchain. 
+L'application utilise les fichiers .DAT du client bitcoin-core (https://bitcoin.org/fr/telecharger)
 
 Environnement Windows. 
 Segwit compatible.
 Xbase (.DBF) databases.
+Extraction possible des soldes vers un fichier .CSV
 
 Developpement sous Harbour core V 3 (une evolution open source de Clipper 5) 
 
