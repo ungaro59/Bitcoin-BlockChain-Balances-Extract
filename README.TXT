@@ -3,15 +3,20 @@ Developpement sous Harbour core V 3 (une evolution open source de Clipper 5) et 
 
 https://github.com/harbour/core#how-to-get
 
-Telechargez la derniere version du compilateur Harbour ici (harbour-nightly-win.exe) :
+Pré-requis :
+
+1) Telechargez la derniere version du compilateur Harbour ici (harbour-nightly-win.exe) :
 https://sourceforge.net/projects/harbour-project/files/binaries-windows/nightly/
 
 A installer dans un dossier racine \HB32 (C:\hb32 par exemple)
 -------------------------------------------------------------
 
-Ce programme balaye l'intégralité de la blockchain locale (fichiers blkXXXXX.DAT) créée par le client 
-Bitcoin-Core (0.15.1) ou ulterieurs. Le chemin des fichiers .dat utilisé par défaut par l'application 
-est %APPDATA%\bitcoin\blocks
+2) Installez l'application Bitcoin-Core (https://bitcoin.org/fr/telecharger) et synchronisez integralement la blockchain.
+
+Que fait ce logigiel :
+
+Ce logiciel balaye l'intégralité de la blockchain locale (fichiers blkXXXXX.DAT) créée par le client 
+Bitcoin-Core. Le chemin des fichiers .dat utilisé par défaut par l'application est %APPDATA%\bitcoin\blocks
 
 Pour utiliser le programme, creer un dossier "Balance" sous C:\hb32 et decompressez l'integralité du dossier gitHub. 
 Compiler le, pour cela, utilisez COMPIL.BAT ou utilisez directement le fichier compilé Balance.EXE :  
