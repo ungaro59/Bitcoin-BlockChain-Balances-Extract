@@ -1,5 +1,5 @@
 # Bitcoin-BlockChain-Balance-Parser
-Extrait les soldes de toutes les adresses bitcoin contenues dans la blockchain. 
+Extrait les derniers soldes de toutes les adresses bitcoin contenues dans la blockchain. 
 L'application utilise les fichiers .DAT du client bitcoin-core (https://bitcoin.org/fr/telecharger)
 
 Environnement Windows. 
