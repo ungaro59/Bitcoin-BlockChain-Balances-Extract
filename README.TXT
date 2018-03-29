@@ -13,7 +13,7 @@ A installer dans un dossier racine \HB32 (C:\hb32 par exemple)
 
 2) Installez l'application Bitcoin-Core (https://bitcoin.org/fr/telecharger) et synchronisez integralement la blockchain.
 
-Que fait ce logigiel :
+Que fait ce logiciel :
 
 Ce logiciel balaye l'intégralité de la blockchain locale (fichiers blkXXXXX.DAT) créée par le client 
 Bitcoin-Core. Le chemin des fichiers .dat utilisé par défaut par l'application est %APPDATA%\bitcoin\blocks
