@@ -34,7 +34,7 @@ Balance [Montant en Satoshis]
 Exemple :  Balance 5000000000
 
 Extrait dans un fichier SOLDES.CSV l'ensemble des adresses bitcoins avec un avoir >=50 BTC
-Il y a actuellement environ 27 millions d'adresses bitcoins avec un solde positif et environ 370 000 000 en tout.
+Il y a actuellement environ 22 millions d'adresses bitcoins avec un solde positif et environ 370 000 000 en tout.
 
 L'application crée un fichier DBF :
 
