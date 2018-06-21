@@ -110,9 +110,9 @@ local nI, aStruct := { { "CHARACTER", "C", 25, 0 }, ;
       { "first_out", "C", 14, 0 }, ;
       { "last_out", "C", 14, 0 }, ;
       { "last_modif", "C", 14, 0 }, ;
-      { "Nb_tr_IN", "N", 7, 0 }, ;
-      { "Nb_tr_OUT", "N", 7, 0 }, ;
-      { "Nb_transac", "N", 7, 0 } }
+      { "Nb_tr_IN", "N", 8, 0 }, ;
+      { "Nb_tr_OUT", "N", 8, 0 }, ;
+      { "Nb_transac", "N", 8, 0 } }
 
    aStructID_TRANS := { { "ID_TRANS", "N", 14, 0 } }
 
