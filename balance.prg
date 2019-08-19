@@ -15,7 +15,7 @@ REQUEST SIXCDX // Pour des index NTX de plus de 4go (Jusqu'à 4To)
 PROCEDURE Main()
 
    LOCAL Dossier_de_base, format_public_key, Nb_transac, Montants_a_partir_de, RPourcent_actu, Rpourcent
-   LOCAL sMontant,exit_user := .F., SAI_NumBlock
+   LOCAL sMontant,exit_user := .F., SAI_NumBlock, t1, t2
    LOCAL SAI_Nom_Fichier, SAI_A_partir_du_block, SAI_dernier_block, nom_fichier, taille_fichier, SAI_Time_Stamp
    LOCAL bFlag_trouve_new_bloc, position_depart_block, numero_fichier, chemin_fichier, NSCRIPT_LENGTH
    LOCAL nCanal, position_block, gnBloc_actuel, NB_TRANS, TX_HASH_CLAIR, NTRANSACTION_INDEX
@@ -74,7 +74,7 @@ local nI, aStruct := { { "CHARACTER", "C", 25, 0 }, ;
       { "MerkleRoot", "C", 64, 0 }, ;
       { "Nb_transac", "N", 6, 0 }, ;
       { "TailleBloc", "N", 7, 0 }, ;
-      { "Difficulte", "N", 16, 2 }, ;
+      { "Difficulte", "N", 17, 2 }, ;
       { "Nonce", "N", 11, 0 }, ;
       { "Version", "N", 11, 0 }, ;
       { "New_bloc", "N", 1, 0 } }
@@ -102,8 +102,7 @@ local nI, aStruct := { { "CHARACTER", "C", 25, 0 }, ;
       { "Montant", "N", 15, 0 }, ;
       { "TimeStamp", "C", 14, 0 } }
 
-   aStructAdr_non_nul := { ;
-      { "adresse", "C", 34, 0 }, ;
+   aStructAdr_non_nul := { { "adresse", "C", 34, 0 }, ;
       { "Montant", "N", 14, 0 }, ;
       { "first_in", "C", 14, 0 }, ;
       { "last_in", "C", 14, 0 }, ;
@@ -112,7 +111,7 @@ local nI, aStruct := { { "CHARACTER", "C", 25, 0 }, ;
       { "last_modif", "C", 14, 0 }, ;
       { "Nb_tr_IN", "N", 8, 0 }, ;
       { "Nb_tr_OUT", "N", 8, 0 }, ;
-      { "Nb_transac", "N", 8, 0 } }
+      { "Nb_transac", "N", 7, 0 } }
 
    aStructID_TRANS := { { "ID_TRANS", "N", 14, 0 } }
 
@@ -461,8 +460,10 @@ local nI, aStruct := { { "CHARACTER", "C", 25, 0 }, ;
 
    SET DELETED OFF
    flag_phase2 = .F.
-
+   
    DO WHILE .T.
+      t1 := hb_DateTime()
+	  
       @4, 0 clear
       IF flag_phase2 = .T.
          EXIT
@@ -866,7 +867,7 @@ local nI, aStruct := { { "CHARACTER", "C", 25, 0 }, ;
             ENDIF
 
             SELE Inputs
-            IF RecCount() > 15000000   // On sort tous les 15 000 000 d'adresses sorties pour limiter la taille des fichier I/O
+            IF RecCount() > 30000000   // On sort tous les 15 000 000 d'adresses sorties pour limiter la taille des fichier I/O
                EXIT
             ENDIF
 
@@ -1162,6 +1163,8 @@ local nI, aStruct := { { "CHARACTER", "C", 25, 0 }, ;
       ZAP
 
       CLOSE ALL
+	  t2 := hb_DateTime() - t1
+	  @3,0 say "Durée du dernier traitement : "+diffabc(t2)
       IF exit_user = .T.
          EXIT
       ENDIF
@@ -1199,6 +1202,30 @@ local nI, aStruct := { { "CHARACTER", "C", 25, 0 }, ;
    ?
    ?"FIN !!"
    ?
+   
+   
+   function diffAbc( t2)
+
+   LOCAL nDays
+   LOCAL nHours
+   LOCAL nMinutes
+   LOCAL nSeconds
+   LOCAL Nb_secondes, nAsMilliSecs
+
+   Nb_secondes= hb_NToSec ( t2 )
+   nDays := INT( Nb_secondes / 86400 )
+   Nb_secondes -= nDays * 86400
+
+   nHours   := INT(  Nb_secondes / (60*60) % 24 )
+    Nb_secondes -= nHours * (60*60)
+
+   nMinutes := INT(  Nb_secondes / (60) % 60 )
+    Nb_secondes -= nMinutes * (60)
+
+   nSeconds := INT(  Nb_secondes / 1 )
+
+RETURN ( iif(nDays>0,ltrim(str(nDays))+"j","")+iif(nHours>0,ltrim(str(nHours))+"h","")+iif(nMinutes>0,ltrim(str(nMinutes))+"m","")+ltrim(str(nSeconds))+"s" )
+
 
    // ********************************************************
    // Affiche Calcul du nombre de blocs traités / mn
