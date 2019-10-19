@@ -18,16 +18,16 @@ Que fait ce logiciel :
 Ce logiciel balaye l'intégralité de la blockchain locale (fichiers blkXXXXX.DAT) créée par le client 
 Bitcoin-Core. Le chemin des fichiers .dat utilisé par défaut par l'application est %APPDATA%\bitcoin\blocks
 
-Pour utiliser le programme, creer un dossier "Balance" sous C:\hb32 et decompressez l'integralité du dossier gitHub. 
+Pour utiliser le programme, créer un dossier "Balance" sous C:\hb32 et copiez l'integralité du dossier gitHub. 
 
 Puis se rendre dans le dossier \HB32\BALANCE et compiler le programme, pour cela, utilisez COMPIL.BAT 
-ou utilisez directement le fichier compilé Balance.EXE :  
+ou utilisez directement le fichier compilé Balance.EXE : 
 
 Compil BALANCE  
 
 à la fin de la compilation, le programme se lance automatiquement, les fichiers .DBF/.NTX nécessaires sont créés et la 
-récupération des blocs de la blockchain démarre. Attention la synchro du client Bitcoin-core doit être complete, sinon
-la récupération ne pourra s'effectuer correctement.
+récupération des blocs de la blockchain démarre. Attention la synchronisation du client Bitcoin-core doit être complete, sinon
+la récupération ne pourra s'effectuer correctement. Vous devez avoir quitté le client bitcoin-core avant de lancer le programme.
 
 Utilisation : 
 
@@ -53,9 +53,15 @@ Exemple :
 111g3qjk7YzhdkKuMmTBzUB8gQ55YZ6MG;5000000000;20100713095544
 
 !! Attention !!, l'extraction depuis le bloc 0 est longue (plusieurs jours?. 
-Il faut au moins 128go d'espace sur le disque dur.
-Pour le traitement, l'utilisaton d'un disque dur SSD >=128Go est très fortement recommandée 
-pour limiter le temps d'extraction depuis le bloc 0 (aujourd'hui plus de 500,000 blocs).
+Actuellement, il faut au moins 180go d'espace sur le disque dur (10/2019). Mais cet espace augmente tous les jours.
+Pour le traitement, l'utilisaton d'un disque dur SSD >=128Go est très fortement recommandée voir obligatoire,
+pour limiter le temps d'extraction depuis le bloc 0 (aujourd'hui plus de 500,000 blocs). Sans Disque SSD ou NVME,
+la récupération risque de prendre des semaines entieres.
+
+Attention, il faut utiliser les mêmes fichiers de la blockchain (.DAT), ne pas refaire la récupération complete de la 
+blockchain avec bitcoin-core depuis le début si vous avez déjà commencé à utiliser le programme. Sinon, il faudra refaire
+toutes la récupération depuis le début. Car Bitcoin-core change la taille des .DAT legerement à chaque récupération
+complete de la blockchain.
 
 Dans l'étape 1, il est possible de stopper le traitement par ECHAP jusqu'à un N° de bloc determiné. 
 Attention, Il faut laisser se terminer les phases 2 et 3 jusqu'au bout..
